@@ -1,0 +1,41 @@
+<script>
+    let a = new Date()
+    let tanggal = a.getDate()
+    let plat_nomor = prompt('Masukan Plat Nomor?')
+    plat_nomor = plat_nomor.slice(5,6)
+
+    if(tanggal % 2 == 0){
+        tanggal = 'genap'
+    }else{
+        tanggal = 'ganjil'
+    }
+
+    if(plat_nomor % 2 == 0){
+        plat_nomor = 'genap'
+    }else{
+        plat_nomor = 'ganjil'
+    }
+
+    if(plat_nomor == tanggal){
+        alert('Boleh lewat')
+    }else{
+        alert('Gak Boleh lewat')
+    }
+
+    // tanggal = 22
+    // plat_nomor = D 1445 CA
+    // plat_nomor = D 1444 CA
+    // if(plat_nomor % 2 != 0 && tanggal % 2 != 0){
+    //     alert('Boleh Lewat')
+    // }else{
+    //     alert('Gak Boleh Lewat')
+    // }
+
+
+    
+    
+
+    
+    
+
+</script>
