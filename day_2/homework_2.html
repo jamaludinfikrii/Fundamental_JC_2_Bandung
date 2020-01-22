@@ -1,0 +1,56 @@
+<script>
+    let buah_1 = 'Leci',buah_2 = 'Anggur',buah_3 = 'Jeruk'
+    let harga_1 = 10000,harga_2 = 15000,harga_3 = 20000
+    let stock_1 = 5,stock_2 = 7,stock_3 = 10
+
+    let qty_buah_1, qty_buah_2, qty_buah_3
+    let lanjut = true
+
+    
+    qty_buah_1 = prompt('Mau Beli ' + buah_1 + ' berapa ? ')
+    if(qty_buah_1 > stock_1){
+        alert('Out of stock')
+        lanjut = false
+    }
+
+    qty_buah_2 = prompt('Mau Beli ' + buah_2 + ' berapa ? ')
+    if(qty_buah_2 > stock_2){
+        alert('Out of stock')
+        lanjut = false
+    }
+
+    qty_buah_3 = prompt('Mau Beli ' + buah_3 + ' berapa ? ')
+    if(qty_buah_3 > stock_3){
+        alert('Out of stock')
+        lanjut = false
+    }
+
+    
+    if(lanjut === true){
+        var total = (qty_buah_1 * harga_1) + (qty_buah_2 * harga_2) + (qty_buah_3 * harga_3)
+        var bill = `Daftar Belanja
+        1 . ${buah_1} = ${qty_buah_1} X ${harga_1} = ${qty_buah_1 * harga_1}
+        2 . ${buah_2} = ${qty_buah_2} X ${harga_2} = ${qty_buah_2 * harga_2}
+        3 . ${buah_3} = ${qty_buah_3} X ${harga_3} = ${qty_buah_3 * harga_3}
+        
+        Grand Total = Rp. ${total}`
+
+        alert(bill)
+
+        var bayar = Number(prompt('Masukan Uang Anda'))
+        console.log(typeof(bayar))
+
+        if(bayar >= total){
+            alert('Pembayaran Sukses, Kembalian = ' + (bayar - total))
+        }else{
+            alert('Pembayaran Gagal, Kekurangan = ' + (bayar - total))
+        }
+
+    }else{
+        alert('Salah Satu Barang Stoknya Habis, Silahkan Ulangi')
+    }
+    
+    
+    
+
+</script>
