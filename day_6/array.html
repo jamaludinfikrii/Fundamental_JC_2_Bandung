@@ -1,0 +1,21 @@
+<script>
+    var data_murid = ['Muslim','Tri','Afgan']
+
+    var text = 'Daftar Murid \n'
+    for(var i = 0; i< data_murid.length;i++){
+        text += (i+1) + '. ' +  data_murid[i] + '\n'
+    }
+
+    alert(text)
+
+    var murid_baru = prompt('Tambah Murid Baru') // ghiran
+
+    data_murid.push(murid_baru)
+
+    var text = 'Daftar Murid \n'
+    for(var i = 0; i< data_murid.length;i++){
+        text += (i+1) + '. ' +  data_murid[i] + '\n'
+    }
+
+    alert(text)
+</script>

@@ -1,0 +1,53 @@
+<script>
+    var data =['Muslim','Tri','Afgan']
+    
+    do{
+        var pilihan = prompt('1. Lihat Data\n2. Tambah Data\n3. Hapus Data')
+        
+        if(pilihan == 1){
+            var text = 'Daftar Murid\n'
+            for(var i = 0 ; i < data.length ; i ++){
+                text += (i+1) + '. ' + data[i] + '\n'
+            }
+            
+            alert(text)
+        }else if(pilihan == 2){
+            var data_baru = prompt('Masukan Nama Murid?')
+            data.push(data_baru)
+            alert('Tambah Data Sukses')
+            
+            var text = 'Daftar Murid\n'
+            for(var i = 0 ; i < data.length ; i ++){
+                text += (i+1) + '. ' + data[i] + '\n'
+            }
+            
+            alert(text)
+        }else if(pilihan == 3){
+            var text = 'Daftar Murid\n'
+            for(var i = 0 ; i < data.length ; i ++){
+                text += (i+1) + '. ' + data[i] + '\n'
+            }
+            text += 'Pilih Nomor Yang Mau di Hapus?'
+
+            var pilih_hapus= prompt(text) //3
+            pilih_hapus = pilih_hapus - 1 // 2
+            if(pilih_hapus >= 0 && pilih_hapus < data.length){
+                var yakin = prompt('Apakah anda yakin mau menghapus ' + data[pilih_hapus] + ' ? (y/n)')
+                if(yakin == 'y'){
+                    data.splice(pilih_hapus,1)
+                    alert('Berhasil Dihapus')
+                }else{
+                    alert('Oke Gajadi Hapus')
+                }
+            }else{
+                alert('Anda Salah Input')
+            }
+            
+        }else{
+            alert('Inputan Salah')
+        }
+        var lagi = prompt('Mau Lagi? (y/n)')
+    }while(lagi == 'y')
+    
+
+</script>
