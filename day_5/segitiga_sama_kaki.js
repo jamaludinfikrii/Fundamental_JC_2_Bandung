@@ -54,3 +54,6 @@ function namaku (nama, gender){
 
 
 namaku('Fikri','Pria')
+
+
+
