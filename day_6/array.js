@@ -46,8 +46,11 @@ for(var i = 0 ; i < mobil.length ; i ++){
 // POP & PUSH
 
 var mobil = ['Avanza' , 'Xenia','Alya']
-mobil.pop()
-mobil.push('Alphard')
-console.log(mobil)
 
-mobil.splice(0,2)
+// buah = ['apple','angur','jeruk'] // 2 -1
+// stock = [20,30,10]
+// stock[1] = 10
+
+mobil[1] = 'Alphard'
+
+console.log(mobil)
