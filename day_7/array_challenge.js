@@ -138,3 +138,8 @@ var arr_func = [hello,Pengurangan,Penjumlahan]
 
 arr_func[1]()
 
+
+
+
+
+
