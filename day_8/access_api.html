@@ -1,0 +1,13 @@
+<script>
+fetch('https://api.komputer-shop.com/products')
+.then((response) => {
+    var data = response.json()
+    return data
+})
+
+.then((data) => {
+    console.log(data[0].nama_produk)
+})
+
+
+</script>
