@@ -131,13 +131,11 @@ const sequenceSum = (start,stop,step) => {
         hasil += i
     }
 
-
     // var angka = start
     // do{
     //     hasil += angka
     //     angka = angka + step
     // }while(angka <= stop)
-
     return hasil
 } 
 
