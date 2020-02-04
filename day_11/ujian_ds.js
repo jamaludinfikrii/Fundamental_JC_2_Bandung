@@ -44,7 +44,7 @@ const formatDuration = (input=0) => { // 31536062
     if(tahun > 0){
         text += tahun + ' year'
         if(tahun > 1){
-            text += "'s"
+            text += "s"
         }
         text += ' , '
     }
@@ -53,7 +53,7 @@ const formatDuration = (input=0) => { // 31536062
     if(hari > 0){
         text += hari + ' day'
         if(hari > 1){
-            text += "'s"
+            text += "s"
         }
         text += ' , '
     }
@@ -62,7 +62,7 @@ const formatDuration = (input=0) => { // 31536062
     if(jam > 0){
         text += jam + ' hour'
         if(jam > 1){
-            text += "'s"
+            text += "s"
         }
         text += ' , '
     }
@@ -71,7 +71,7 @@ const formatDuration = (input=0) => { // 31536062
     if(menit > 0){
         text += menit + ' minute'
         if(menit > 1){
-            text += "'s"
+            text += "s"
         }
         text += ' , '
     }
@@ -80,7 +80,7 @@ const formatDuration = (input=0) => { // 31536062
     if(detik > 0){
         text += detik + ' second'
         if(detik > 1){
-            text += "'s"
+            text += "s"
         }
         text += ' , '
     }
@@ -103,7 +103,95 @@ const formatDuration = (input=0) => { // 31536062
 }
 
 
-formatDuration(10)// 1 Year , 1 Minute , 2 Second's , 
+// formatDuration(123456789)
+
+
+const countVowel = (sentence='') => {
+    var jumlah_vowel = 0
+    for(var i = 0; i < sentence.length ; i ++){
+        var char = sentence[i].toLowerCase()
+        if(char == 'a' || char == 'i' || char == 'u' || char == 'e' || char =='o'){
+            jumlah_vowel ++
+        }
+    }
+    return jumlah_vowel
+}
+
+// console.log(countVowel('Budi Pergi Ke Pasar'))
 
 
 
+// [1,1,2,2,3,3,4]
+
+// arr = [[1,2,3],[4,2,3],[1]]
+const given = (arr = []) => {
+    var new_arr = [] // [1,2,3,4,2,3,1]
+    for(var i = 0 ; i < arr.length ; i++){
+        for(var j = 0 ; j < arr[i].length; j ++){
+            new_arr.push(arr[i][j])
+        }
+    }
+    // new_arr.push(arr[0][0])
+    // new_arr.push(arr[0][1])
+    // new_arr.push(arr[0][2])
+    // new_arr.push(arr[1][0])
+    // new_arr.push(arr[1][1])
+    // new_arr.push(arr[1][2])
+    // new_arr.push(arr[2][2])
+
+    console.log(new_arr.sort())
+}
+// given([1,2,3],[4,2,3],[1])
+
+
+
+
+
+const countWords = (sentence = '') => {
+    var arrKata = [] // [nama,saya,adalah]
+    var arrJumlahKata =[] // [1,1,1]
+    var arrSentence = sentence.split(' ') // ['Nama' , "saya" , 'adalah','nama']
+
+    for(var i = 0 ; i< arrSentence.length ; i ++){
+        // 
+        if(arrKata.includes(arrSentence[i].toLowerCase())){
+            var index_ke =  arrKata.indexOf(arrSentence[i].toLowerCase())
+            arrJumlahKata[index_ke] ++
+        }else{
+            arrKata.push(arrSentence[i].toLowerCase())
+            arrJumlahKata.push(1)
+        }
+    }
+
+    console.log(arrKata)
+    console.log(arrJumlahKata)
+    var text = ''
+    for(var i = 0 ;i < arrKata.length ; i++){
+        text += "Jumlah kata '" + arrKata[i].charAt(0).toUpperCase() + arrKata[i].slice(1,arrKata[i].length) + "' adalah " + arrJumlahKata[i] + '\n'
+    }
+    console.log(text)
+}
+
+
+countWords('Nama saya adalah nama saya')
+
+// ['Nama' , 'Saya' ,"Adalah"]
+// [2 , 1,1]
+
+// {
+//     nama : 2,
+//     saya : 1,
+//     adalah : 1
+// }
+
+// Jumlah kata "nama" ada Sebanyak 2
+// Jumlah kata "saya" ada Sebanyak 1
+// Jumlah kata "adalah" ada Sebanyak 1
+
+
+
+
+var arr = [1,2,4,5,20,30,63,42]
+
+arr = arr.sort(function(a,b) {return a-b})
+console.log(arr)
