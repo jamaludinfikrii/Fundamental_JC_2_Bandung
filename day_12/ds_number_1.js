@@ -54,4 +54,60 @@ const removeOutlier = (data=[]) => {
 }
 
 
-removeOutlier([60,63,64,62,69,80,1,60,63,64,60])
+// removeOutlier([60,63,64,62,69,80,1,60,63,64,60])
+
+
+// friend(["Ryan", "Kiera", "Mark"]) // ["Kiera"]
+// friend(["Fikri","Seto","Putri"]) // ['Fikri','Putri']
+// friend(["afgan","tri","muslim"]) // ['afgan']
+
+
+
+// findMaxAndMin([1,2,34,12,5,10]) // min = 1 , max = 34 Math.min // Sort
+
+
+
+// ganjilGenap([2,3,1,3,4]) // ganjil = 3,1,3 genap = 2,4
+
+
+
+
+// Arr Methods For Loops
+
+// ForEach
+// Filter
+// Map
+
+var a = [1,3,4,2,3,4,5,1]
+
+// for(var i = 0 ; i < a.length ; i++){
+//     console.log(a[i])
+// }
+
+a.forEach(function(data){
+    console.log(data + 5) // callback
+})
+
+a.sort(function(a,b){return a-b}) // function yang parameter nya juga function
+
+
+
+const ganjilGenap =(arr=[]) => {
+    let arrGanjil = []
+    let arrGenap = []
+
+    arr.forEach(function(el){
+        if(el % 2 == 0){
+            arrGenap.push(el)
+        }else{
+            arrGanjil.push(el)
+        }
+    })
+
+    console.log(arrGanjil)
+    console.log(arrGenap)
+
+}
+
+
+ganjilGenap([1,4,3,2])
