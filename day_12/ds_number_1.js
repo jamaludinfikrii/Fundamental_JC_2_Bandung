@@ -111,3 +111,35 @@ const ganjilGenap =(arr=[]) => {
 
 
 ganjilGenap([1,4,3,2])
+
+
+
+sumTwoSmallest([3,4,2,4,2,3,4]) // 2 + 2 = 4
+sumTwoSmallest([3,2,1]) // 1 + 2 = 3
+
+removeDuplicates('alpha beta beta gamma gamma') // 'alpha beta gamma'
+removeDuplicates('mari mari kesini') // 'mari kesini'
+
+theMost('xlpphaaaa') // huruf paling banyak adalah 'a'
+theMost('fikriiii') // huruf paling banyak adalah 'i'
+
+findUniq([1,1,1,1,3,1,1]) // 3
+findUniq([2,1,2,3,3,4,4]) // 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
