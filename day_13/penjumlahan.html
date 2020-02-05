@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <center>
+            <input type="number" id="angka1" placeholder="Angka 1">
+            <input type="number" id="angka2" placeholder="Angka 2">
+            <button>
+                Jumlahkan
+            </button>
+            <br>
+            <h3>Hasilnya Adalah =</h3>
+        </center>
+    
+        <script>
+            console.log(document.getElementById('angka1').placeholder) // selector.attribute
+            
+            function onJumlahkanClick (){
+                var angka1 = document.getElementById('angka1').value
+                var angka2 = document.getElementById('angka2').value
+                var el_h3 = document.getElementsByTagName('h3')[0]
+
+                if(angka1 == '' || angka2 == ''){
+                    el_h3.innerHTML = 'Form Gak Boleh Kosong'
+                    el_h3.style = "color : red; font-size : 40px"
+                }else{
+                    var hasil = 'Hasilnya adalah ' + (Number(angka1) + Number(angka2))
+                    document.getElementsByTagName('h3')[0].style = "color : black; font-size : 16px"
+                    document.getElementsByTagName('h3')[0].innerHTML = hasil
+                }
+            
+            }
+
+            document.getElementsByTagName('button')[0].addEventListener('click',onJumlahkanClick)
+        </script>
+    </body>
+</html>

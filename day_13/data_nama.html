@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <center>
+            <input type="text" id="nama" placeholder="masukan nama" >
+            <br>
+            <br>
+            <button>submit</button>
+            <h1>Daftar Nama</h1>
+            <p id="datas"></p>
+        </center>
+        <script>
+            let data = ['Fikri','Budi']
+            
+            function printData(){
+                var text = ''
+                for(var i =0 ;i<data.length ; i++){
+                    text += (i+1) + '. ' + data[i] + '<br>'
+                }
+                document.getElementById('datas').innerHTML = text
+            }
+
+            function onSubmitClick (){
+                var nama = document.getElementById('nama').value
+                data.push(nama)
+                document.getElementById('nama').value = ''
+                printData()
+            }
+
+            document.getElementsByTagName('button')[0].addEventListener('click',onSubmitClick)
+
+
+
+            printData()
+
+
+        </script>
+    </body>
+</html>

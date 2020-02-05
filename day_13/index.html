@@ -1,0 +1,92 @@
+<html>
+    <head></head>
+    <body>
+        <p id='iniid'>Hello Ini Tag P</p>
+        <input id="nama" type="text"  placeholder="masukan nama" /> <!-- Ini Element  -->
+        
+        <button class="klik">Klik</button>
+        <!-- <button id="button_2" class="klik">Klik</button>
+        <button class="klik">Klik</button> -->
+        
+
+        <script>
+            
+            const onClickBtn =() => {
+                let value = document.getElementById('nama').value
+                let el_p = document.getElementById('iniid')
+                el_p.innerHTML = 'Selamat Datang ' + value
+            }
+            
+            document.getElementsByClassName('klik')[0].addEventListener("click" , onClickBtn)
+            
+            // DOM (Document Object Model)
+
+
+            // SELECTOR
+            // document.getElementById('iniid').innerHTML = 'Fikri'  // selector
+            // document.getElementsByClassName('klik')[1].innerHTML = 'send'
+
+
+            // EVENTS
+            // Kapan Function Jalan
+
+            // function UbahP(){
+            //     document.getElementById('iniid').innerHTML = 'Fikri'
+            // }
+
+            
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HTML -->
+
+<!-- ELEMENT -->
+
+
+<!-- TAG HTML
+    selalu ada tag buka dan tag tutup
+-->
+
+<!-- ATTRIBUT
+    ex : type , placeholder
+    tiap tag punya attribut masing masing
+-->
+
+<!-- INNER HTML
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- DOM
+    1. Selector
+    byId, byName, byClass, byTagName
+    2. Event
+
+-->
