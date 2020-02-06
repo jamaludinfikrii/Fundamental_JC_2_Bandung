@@ -152,3 +152,32 @@ const findUniq = (arr=[]) => {
 console.log(findUniq([1,1,1,2,2,3,3]))
 
 
+
+
+
+
+filterData(['fikri','fendi','budi','andi'] , 'f')  // ['fikri','fendi']
+filterData(['fikri','fendi','budi','andi'] , 'i')  // ['fikri','fendi','budi','andi']
+
+countPairs(['red','red','green','blue','green']) // 2 pairs
+countPairs(['red','red','red','red','green']) // 2 pairs
+countPairs(['red','red','yello','blue','green']) // 1 pairs
+
+numify([2,3,1,2,3,4,5,4])
+// angka genap = 2,2,4,4
+// angka ganjil = 3,1,3,5
+
+// max angka genap = 4
+// max angka ganjil = 5
+
+// avg. angka genap = 3
+// sum angka ganjil = 12
+
+
+
+
+
+
+
+
+
