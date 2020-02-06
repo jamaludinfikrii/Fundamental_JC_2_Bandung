@@ -109,7 +109,7 @@ const numify = (numbers = []) => {
 }
 
 
-console.log( numify([2,3,1,2,3,4,5,4]) )
+// console.log( numify([2,3,1,2,3,4,5,4]) )    
 
 
 // angka genap = 2,2,4,4
@@ -120,3 +120,41 @@ console.log( numify([2,3,1,2,3,4,5,4]) )
 
 // avg. angka genap = 3
 // sum angka ganjil = 12
+
+
+
+
+var n = 1000
+var d = 50
+var p = 5/100
+var t = 1200
+
+
+var penduduk = n // 1205
+var tahun = 0 // 1 // 2
+
+while(penduduk <= t){
+    var pertumbuhan = d + (p*penduduk) // 105
+    console.log(pertumbuhan)
+    penduduk += pertumbuhan // 
+    console.log(penduduk)
+    tahun ++
+    console.log(tahun)
+}
+
+console.log(tahun)
+
+
+const getMiddle = (str) => {
+    return str.length %2 == 0? str.substr(str.length/2-1,2)  : str[Math.floor(str.length/2)]
+    
+}
+
+console.log(getMiddle('fikri'))
+
+
+// var str = 'fikrii'
+// str.substr(2,2)
+// str[2]
+// str.charAt(2)
+

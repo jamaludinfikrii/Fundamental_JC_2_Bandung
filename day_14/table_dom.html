@@ -1,0 +1,88 @@
+<html>
+    <head>
+
+        <style>
+            table,tr,td{
+                border: 1px solid grey;
+                padding: 10px;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <input id="nomor" type="text" placeholder="Masukan no">
+            <input id="nama" type="text" placeholder="Masukan nama">
+            <br>
+            <input id="gender" type="text" placeholder="Masukan gender">
+            <input id="pekerjaan" type="text" placeholder="Masukan pekerjaan">
+            <br>
+            <button id="button">
+                Add Data
+            </button>
+            <table>
+                <thead>
+                    <tr>
+                        <td>No.</td>
+                        <td>Nama</td>
+                        <td>Gender</td>
+                        <td>Pekerjaan</td>
+                    </tr>
+                </thead>
+                <tbody id="show">
+                </tbody>
+            </table>
+        </center>
+
+
+        <script>
+
+
+            var data = [
+                {no : 1,nama : "Fikri",gender : "Pria",pekerjaan : "karyawan"},
+                {no : 2,nama : "Seto",gender : "Pria",pekerjaan : "polisi"},
+                {no : 3,nama : "Budi",gender : "Pria",pekerjaan : "satpam"},
+            ]
+
+            function printData (){
+                var print = ''
+                for(var i = 0 ; i< data.length ; i++){
+                    print+= `<tr>
+                        <td>${data[i].no}</td>
+                        <td>${data[i].nama}</td>
+                        <td>${data[i].gender}</td>
+                        <td>${data[i].pekerjaan}</td>
+                    </tr>`
+                }
+    
+                document.getElementById('show').innerHTML = print
+            }
+
+            function onAddDataClick (){
+                // Ambil Value Dari INputan
+                var no = document.getElementById('nomor').value
+                var nama = document.getElementById('nama').value
+                var gender = document.getElementById('gender').value
+                var pekerjaan = document.getElementById('pekerjaan').value
+                // Bikin Object dari value inputan
+                var new_data = {
+                    no : no,
+                    nama : nama,
+                    gender : gender,
+                    pekerjaan : pekerjaan
+                }
+                // object di push ke dalam array data
+                data.push(new_data)
+                // Print Ulang
+                printData()
+            }
+
+            printData()
+            
+            document.getElementById('button').addEventListener('click',onAddDataClick)
+            
+
+
+        </script>
+    </body>
+</html>
