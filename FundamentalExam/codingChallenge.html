@@ -51,6 +51,29 @@
             // newArr[2][0] = arr[2][2]
             // newArr[2][1] = arr[1][2]
             // newArr[2][2] = arr[0][2]
+        }else if(kali == 2){
+
+            for(var i = 0 ; i < arr.length ; i++){
+                // i = 0
+                // j = 0 | 1
+                for(var j = 0 ; j < arr.length ; j++){
+                    newArr[i][j] = arr[2-i][2-j]
+                }
+            }
+            // newArr[0][0] = arr[2][2]
+            // newArr[0][1] = arr[2][1]
+            // newArr[0][2] = arr[2][0]
+            
+            // newArr[1][0] = arr[1][2]
+            // newArr[1][1] = arr[1][1]
+            // newArr[1][2] = arr[1][0]
+
+            // newArr[2][0] = arr[0][2]
+            // newArr[2][1] = arr[0][1]
+            // newArr[2][2] = arr[0][0]
+            
+        }else if((arah == 'kiri' && kali == 1) || (arah=='kanan' && kali == 3)){
+            // dicoba
         }
         console.log(newArr)
 
