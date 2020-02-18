@@ -1,0 +1,75 @@
+<script>
+    var arr = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+
+    function printArr (){
+        var output = ''
+        // i = 1
+        // j = 0
+        for(var i = 0 ; i <arr.length ; i++){
+            for(var j =0 ; j < arr[i].length ; j++){
+                output += arr[i][j] + ' '
+            }
+            output += '\n'
+        }
+
+        // output += 
+        // `${arr[0][0]} ${arr[0][1]} ${arr[0][2]}
+        //  ${arr[1][0]} ${arr[1][1]} ${arr[1][2]}
+        //  ${arr[2][0]} ${arr[2][1]} ${arr[2][2]}`
+
+        return output
+    }
+
+    function puter(arah=''){
+        var newArr = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+        ]
+        var kali = prompt(printArr() +'\nMau Puter Berapa Kali?')
+        if((arah == 'kanan' && kali == 1) || (arah== 'kiri' && kali == 3)){
+            // i = 0 | 1
+            // j = 0
+            for(var i = 0 ; i < arr.length ; i++){
+                for(var j = 0 ; j < arr.length ; j++){
+                    newArr[i][j] = arr[2-j][i]
+                }
+            }
+
+            // newArr[0][0] = arr[2][0]
+            // newArr[0][1] = arr[1][0]
+            // newArr[0][2] = arr[0][0]
+
+            // newArr[1][0] = arr[2][1]
+            // newArr[1][1] = arr[1][1]
+            // newArr[1][2] = arr[0][1]
+
+            // newArr[2][0] = arr[2][2]
+            // newArr[2][1] = arr[1][2]
+            // newArr[2][2] = arr[0][2]
+        }
+        console.log(newArr)
+
+        arr = newArr
+    }
+
+    while(true){
+        var text = printArr() + '\n1. Putar Kanan\n2. Putar Kiri\n3. Sort Horizontal\n4. Sort Vertical\n5. Exit'
+        var menu = prompt(text)
+
+        if(menu == '5'){break;}
+        else if(menu == '1'){
+            puter('kanan')
+        }else if(menu == '2'){
+            puter('kiri')
+        }
+    }
+
+
+    
+    alert('Thank You')
+</script>
