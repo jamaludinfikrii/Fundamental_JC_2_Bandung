@@ -31,6 +31,9 @@
             [0,0,0]
         ]
         var kali = prompt(printArr() +'\nMau Puter Berapa Kali?')
+        // 5 = 1 // 8 = 4 // 6 = 2
+        kali = kali % 4
+
         if((arah == 'kanan' && kali == 1) || (arah== 'kiri' && kali == 3)){
             // i = 0 | 1
             // j = 0
@@ -74,10 +77,71 @@
             
         }else if((arah == 'kiri' && kali == 1) || (arah=='kanan' && kali == 3)){
             // dicoba
+            for(var i = 0 ; i < arr.length ; i++){
+                // i = 0
+                // j = 0 | 1
+                for(var j = 0 ; j < arr.length ; j++){
+                    newArr[i][j] = arr[j][2-i]
+                }
+            }
+            // newArr[0][0] = arr[0][2]
+            // newArr[0][1] = arr[1][2]
+            // newArr[0][2] = arr[2][2]
+
+            // newArr[1][0] = arr[0][1]
+            // newArr[1][1] = arr[1][1]
+            // newArr[1][2] = arr[2][1]
+
+            // newArr[2][0] = arr[0][0]
+            // newArr[2][1] = arr[1][0]
+            // newArr[2][2] = arr[2][0]
+        }else if(kali == 0){
+            newArr = arr
         }
         console.log(newArr)
 
         arr = newArr
+    }
+
+    const sortHorizontal = () => {
+        var baris = prompt(printArr() +'\nBaris Ke Berapa?') // 1
+        baris = baris-1
+        var mauDiSort = arr[baris] // [3,2,1]
+        if(mauDiSort[1] > mauDiSort[0]){
+            mauDiSort.sort(function(a,b) {return b-a})
+            // SORT DESCENDING (max to min)
+        }else{
+            mauDiSort.sort(function(a,b) {return a-b})
+            // ASCENDING (min to max)
+        }
+
+        arr[baris] = mauDiSort
+
+    }
+
+    const sortVertical = () => {
+    //     var arr = [
+    //     [1,2,3],
+    //     [4,5,6],
+    //     [7,8,9]
+    // ]
+        var kolom = prompt(printArr() + '\nMau Kolom Ke Berapa?') // 1
+        kolom = kolom -1
+        var mauDiSort = [arr[0][kolom],arr[1][kolom],arr[2][kolom]] 
+        console.log(mauDiSort)
+
+        if(mauDiSort[1] > mauDiSort[0]){
+            mauDiSort.sort(function(a,b) {return b-a})
+            // SORT DESCENDING (max to min)
+        }else{
+            mauDiSort.sort(function(a,b) {return a-b})
+            // ASCENDING (min to max)
+        }
+
+        arr[0][kolom] = mauDiSort[0]
+        arr[1][kolom] = mauDiSort[1]
+        arr[2][kolom] = mauDiSort[2]
+
     }
 
     while(true){
@@ -89,6 +153,10 @@
             puter('kanan')
         }else if(menu == '2'){
             puter('kiri')
+        }else if(menu == '3'){
+            sortHorizontal()
+        }else if(menu == '4'){
+            sortVertical()
         }
     }
 
